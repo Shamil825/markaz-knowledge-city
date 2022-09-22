@@ -10,16 +10,9 @@ class MyImageView extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-       decoration: BoxDecoration(
-         color: Colors.yellow,
-                        
-                        borderRadius: const BorderRadius.all(
-                          
-                          Radius.circular(30),
-                        ),
-                      ),
-        height: 200,
-        width: 300,
+       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+        
+       
         
           child: Image.asset(imgPath,fit: BoxFit.fill,),
         

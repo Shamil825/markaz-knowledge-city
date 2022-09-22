@@ -277,28 +277,33 @@ class _HomescreenOgState extends State<HomescreenOg> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: [
-                          CarouselSlider.builder(
-                            itemCount: slide.length,
-                            itemBuilder: (context, index, realIndex) {
-                              return Container(
-                                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                                child: MyImageView(slide[index]));
-                            },
-                            options: CarouselOptions(
-                              onPageChanged: (index, reason) {
-                                setState(() {
-                                  pageIndex = index;
-                                });
+                          Container(
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                            child: CarouselSlider.builder(
+                              itemCount: slide.length,
+                              itemBuilder: (context, index, realIndex) {
+                                return ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: MyImageView(slide[index]),
+                                );
                               },
-                              height: 180.0,
-                              enlargeCenterPage: true,
-                              autoPlay: true,
-                              aspectRatio: 16 / 9,
-                              autoPlayCurve: Curves.fastOutSlowIn,
-                              enableInfiniteScroll: true,
-                              autoPlayAnimationDuration:
-                                  Duration(milliseconds: 800),
-                              viewportFraction: 0.8,
+                              options: CarouselOptions(
+                                onPageChanged: (index, reason) {
+                                  setState(() {
+                                    pageIndex = index;
+                                  });
+                                },
+                                height: 180.0,
+                                enlargeCenterPage: true,
+                                autoPlay: true,
+                                aspectRatio: 16 / 9,
+                                autoPlayCurve: Curves.fastOutSlowIn,
+                                enableInfiniteScroll: true,
+                               
+                                autoPlayAnimationDuration:
+                                    Duration(milliseconds: 800),
+                                viewportFraction: 0.8,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -329,7 +334,7 @@ class _HomescreenOgState extends State<HomescreenOg> {
                             '"Giving charity provides shade on',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          Text(
+                         const Text(
                             'the day of judgement"',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
