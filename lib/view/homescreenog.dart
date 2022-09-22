@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:kinfra_project/view/widgetImage.dart';
+
+import 'package:kinfra_project/view/widget/widgetImage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomescreenOg extends StatefulWidget {
@@ -40,21 +41,48 @@ class _HomescreenOgState extends State<HomescreenOg> {
             SliverToBoxAdapter(
               child: Column(
                 children: [
-                  SizedBox(height: 10,),
+                const  SizedBox(height: 10,),
                   Container(
                     height: 5,
                     width: 30,
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: Colors.grey,
-                      borderRadius: const BorderRadius.all(
+                      borderRadius:  BorderRadius.all(
                         Radius.circular(20),
                       ),
                     ),
                   ),
-                  SizedBox(
+                const  SizedBox(
                     height: 10,
                   ),
-                  Row(
+                firstWidget(),
+                 
+                const  SizedBox(
+                    height: 10,
+                  ),
+                  secondWidget(),
+                 const SizedBox(
+                    height: 10,
+                  ),
+                  carouselWidget(),
+                const  SizedBox(
+                    height: 10,
+                  ),
+                  fourthWidget(),
+                 const SizedBox(height: 10,),
+                 fifthWidget(),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+  
+
+Widget firstWidget(){
+    return  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
@@ -86,10 +114,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                             fit: BoxFit.fill,
                                           ),
                                         ),
-                                        SizedBox(
+                                       const SizedBox(
                                           height: 5,
                                         ),
-                                        Text("education")
+                                     const   Text("education")
                                       ],
                                     ),
                                     Column(
@@ -102,10 +130,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                             fit: BoxFit.fill,
                                           ),
                                         ),
-                                        SizedBox(
+                                      const  SizedBox(
                                           height: 5,
                                         ),
-                                        Text("Health")
+                                       const Text("Health")
                                       ],
                                     ),
                                     Column(
@@ -118,16 +146,16 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                             fit: BoxFit.fill,
                                           ),
                                         ),
-                                        SizedBox(
+                                      const  SizedBox(
                                           height: 5,
                                         ),
-                                        Text("Living")
+                                      const  Text("Living")
                                       ],
                                     ),
                                   ],
                                 ),
                               ),
-                              SizedBox(
+                            const  SizedBox(
                                 height: 20,
                               ),
                               Row(
@@ -144,10 +172,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                           fit: BoxFit.fill,
                                         ),
                                       ),
-                                      SizedBox(
+                                    const  SizedBox(
                                         height: 5,
                                       ),
-                                      Text("Culture")
+                                    const  Text("Culture")
                                     ],
                                   ),
                                   Column(
@@ -160,10 +188,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                           fit: BoxFit.fill,
                                         ),
                                       ),
-                                      SizedBox(
+                                    const  SizedBox(
                                         height: 5,
                                       ),
-                                      Text("Commerce")
+                                     const Text("Commerce")
                                     ],
                                   ),
                                   Column(
@@ -176,10 +204,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                           fit: BoxFit.fill,
                                         ),
                                       ),
-                                      SizedBox(
+                                    const  SizedBox(
                                         height: 5,
                                       ),
-                                      Text("Agriculture")
+                                   const   Text("Agriculture")
                                     ],
                                   ),
                                 ],
@@ -189,7 +217,7 @@ class _HomescreenOgState extends State<HomescreenOg> {
                         ),
                       ),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration:const BoxDecoration(
                           color: Color.fromARGB(255, 240, 232, 232),
                            
                             borderRadius:
@@ -209,10 +237,10 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                SizedBox(
+                              const  SizedBox(
                                   height: 5,
                                 ),
-                                Text("Scan QR")
+                             const   Text("Scan QR")
                               ],
                             ),
                             Column(
@@ -225,21 +253,22 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                SizedBox(
+                            const    SizedBox(
                                   height: 5,
                                 ),
-                                Text("Notification")
+                               const Text("Notification")
                               ],
                             )
                           ],
                         ),
                       )
                     ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
+                  );
+  }
+
+
+Widget secondWidget(){
+  return Container(
                     height: 200,
                     width: MediaQuery.of(context).size.width/1.1,
                     decoration: BoxDecoration(
@@ -252,7 +281,7 @@ class _HomescreenOgState extends State<HomescreenOg> {
                       padding: const EdgeInsets.all(12),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children:const [
                           Text(
                             "Markaz Knowledge City",
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -265,14 +294,14 @@ class _HomescreenOgState extends State<HomescreenOg> {
                         ],
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
+                  );
+}
+
+Widget carouselWidget(){
+  return Container(
                     width: 380,
                     height: 220,
-                    color: Color.fromARGB(255, 240, 232, 232),
+                    color:const Color.fromARGB(255, 240, 232, 232),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -301,27 +330,26 @@ class _HomescreenOgState extends State<HomescreenOg> {
                                 enableInfiniteScroll: true,
                                
                                 autoPlayAnimationDuration:
-                                    Duration(milliseconds: 800),
+                                  const  Duration(milliseconds: 800),
                                 viewportFraction: 0.8,
                               ),
                             ),
                           ),
-                          SizedBox(
+                       const   SizedBox(
                             height: 10,
                           ),
                           AnimatedSmoothIndicator(
-                            effect: WormEffect(dotWidth: 8, dotHeight: 8),
+                            effect:const WormEffect(dotWidth: 8, dotHeight: 8),
                             activeIndex: pageIndex,
                             count: 3,
                           )
                         ],
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
+                  );
+}
+Widget fourthWidget(){
+  return Container(
                     height: 150,
                     width: 380,
                     color: Colors.white,
@@ -330,7 +358,7 @@ class _HomescreenOgState extends State<HomescreenOg> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                        const  Text(
                             '"Giving charity provides shade on',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
@@ -352,34 +380,33 @@ class _HomescreenOgState extends State<HomescreenOg> {
                         ],
                       ),
                     ),
-                  ),
-                  SizedBox(height: 10,),
-                  Container(
+                  );
+}
+
+Widget fifthWidget(){
+  return Column(
+    children: [
+       Container(
                      width: MediaQuery.of(context).size.width,
                     height: 200,
                     child: Image.asset("assets/null.jpeg"),
 
                   ),
-                  SizedBox(height: 10,),
+                 const SizedBox(height: 10,),
                     Container(
                      width: MediaQuery.of(context).size.width,
                     height: 200,
                    child: Image.asset("assets/null.jpeg"),
 
                   ),
-                  SizedBox(height: 10,),
+               const   SizedBox(height: 10,),
                     Container(
                     width: MediaQuery.of(context).size.width,
                     height: 200,
                    child: Image.asset("assets/null.jpeg"),
 
                   )
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+    ],
+  );
+}
 }
