@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:kinfra_project/view/widget/image_ad_widget.dart';
 
 import 'package:kinfra_project/view/widget/widgetImage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -390,28 +391,17 @@ class _HomescreenOgState extends State<HomescreenOg> {
   Widget fifthWidget() {
     return Column(
       children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          child: Image.asset("assets/null.jpeg",fit: BoxFit.cover,),
-        ),
+        Image_ad_widget(context: context,image:"assets/null.jpeg" ,),
         const SizedBox(
           height: 10,
         ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          child: Image.asset("assets/null.jpeg",fit: BoxFit.cover,),
-        ),
+      Image_ad_widget(context: context,image:"assets/null.jpeg" ,),
         const SizedBox(
           height: 10,
         ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          child: Image.asset("assets/null.jpeg",fit: BoxFit.cover,),
-        )
+        Image_ad_widget(context: context,image:"assets/null.jpeg" ,),
       ],
     );
   }
 }
+
