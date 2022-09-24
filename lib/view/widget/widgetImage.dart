@@ -10,6 +10,7 @@ class MyImageView extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      width: MediaQuery.of(context).size.width,
        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
         
        
